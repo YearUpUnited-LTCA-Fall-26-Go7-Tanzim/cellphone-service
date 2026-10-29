@@ -19,13 +19,35 @@ public class CellphoneApplication {
         System.out.print("Who is the owner of the phone? ");
         phone.setOwner(scanner.nextLine().trim());
 
-        System.out.println("\nSerial number:" + phone.getSerialNumber());
-        System.out.println("Cellphone model: " + phone.getModel());
-        System.out.println("Cellphone carrier: " + phone.getCarrier());
-        System.out.println("Phone number: " + phone.getPhoneNumber());
-        System.out.println("Owner: " + phone.getOwner());
+
+
+
+
+        CellPhone cellPhone2 = new CellPhone();
+        cellPhone2.setSerialNumber(1234567);
+        cellPhone2.setModel("Galaxy S24");
+        cellPhone2.setCarrier("AT&T");
+        cellPhone2.setPhoneNumber("855-555-2222");
+        cellPhone2.setOwner("Dana Wyatt");
+
+        display(phone);
+        display(cellPhone2);
+
+        phone.dial(cellPhone2.getPhoneNumber());
+        cellPhone2.dial(phone.getPhoneNumber());
+
+
 
 
 
     }
+    public static void display(CellPhone phone) {
+        System.out.println("Owner: " + phone.getOwner());
+        System.out.println("Model: " + phone.getModel());
+        System.out.println("Phone number: " + phone.getPhoneNumber());
+
+    }
+
+
+
 }
