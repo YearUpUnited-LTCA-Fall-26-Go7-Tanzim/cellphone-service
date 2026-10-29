@@ -30,11 +30,15 @@ public class CellphoneApplication {
         cellPhone2.setPhoneNumber("855-555-2222");
         cellPhone2.setOwner("Dana Wyatt");
 
+        CellPhone cellPhone3 = new CellPhone(7654321, "Pixel 9", "T-Mobile", "877-555-0000", "Alex");
+
         display(phone);
         display(cellPhone2);
+        display(cellPhone3);
 
         phone.dial(cellPhone2.getPhoneNumber());
         cellPhone2.dial(phone.getPhoneNumber());
+        phone.dial(cellPhone3.getPhoneNumber());
 
 
 
